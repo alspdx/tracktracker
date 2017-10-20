@@ -10,7 +10,7 @@ This website was developed in order to gather information about the user and use
 
 ## Setup
 
-[Click Here]() to visit the website on GitHub Pages.
+[Click Here](https://alspdx.github.io/tracktracker/) to visit the website on GitHub Pages.
 
 ## Technologies Used
 
