@@ -8,30 +8,25 @@
     <title>Epicodus Track Tracker</title>
   </head>
   <body>
-    <!-- HEADER -->
     <div class="container-responsive container-padding">
-      <div class="row">
+      <div class="row"><!-- HEADER -->
         <div class="col-md-12">
           <div class="jumbotron text-center">
             <h1 class="display-3">Epicodus Track Tracker</h1>
             <p class="lead">Which path will YOU take?</p>
           </div>
-
         </div>
       </div>
-    <!-- BODY INTRO -->
-      <div class="row">
+      <div class="row"><!-- BODY INTRO -->
         <div class="col-md-12">
           <p>Epicodus offers full-time courses in languages such as C#, PHP, Javascript, .NET, Ruby, Rails, React, <em>and more!</em> Every track starts with Introduction to Programming, and includes an advanced JavaScript course, as well as two language-specific courses — four five-week sessions in total. In addition, students complete two weeks of job and internship prep and finish their studies with a five-week internship.</p>
           <p class="lead text-center">Use our Track Tracker to find out which track is right for YOU!</p>
         </div>
       </div>
-    <!-- BODY CONTENT -->
-      <div class="row">
-    <!-- USER IN -->
+      <div class="row"><!-- BODY CONTENT -->
         <div class="col-md-6">
-          <h3>Enter your information below to take our survey!</h3>
-          <form id="userinfo">
+          <form id="userinfo"><!-- USER INFO FORM-->
+            <h3>Enter your information below to take our survey!</h3>
             <div class="form-row">
               <div class="form-group col-md-6">
                 <label for="first-name">First Name</label>
@@ -41,14 +36,16 @@
                 <label for="last-name">Last Name</label>
                 <input type="text" class="form-control" id=last-name placeholder="Last Name">
               </div>
-              <div class="form-group col-md-12">
-                <label for="address">Address</label>
-                <input type="text" class="form-control" id=address placeholder="123 Address St">
-              </div>
-              <div class="form-group col-md-12">
-                <label for="apartment">Address 2</label>
-                <input type="text" class="form-control" id=apartment placeholder="Apartment">
-              </div>
+            </div>
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" class="form-control" id=address placeholder="123 Address St">
+            </div>
+            <div class="form-group">
+              <label for="apartment">Address 2</label>
+              <input type="text" class="form-control" id=apartment placeholder="Apartment">
+            </div>
+            <div class="form-row">
               <div class="form-group col-md-7">
                 <label for="city">City or Town</label>
                 <input type="text" class="form-control" id=city placeholder="City or Town">
@@ -117,10 +114,144 @@
             </div>
             <button type="submit" class="btn btn-primary">Take the survey!</button>
           </form>
+          <form id="tracktracker"><!-- TRACK TRACKER FORM -->
+            <fieldset class="form-group"><!-- FIRST question -->
+              <legend>Which operating system do you prefer?</legend>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question1" value="designreact">
+                  Mac OS X
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question1" value="androiddotnet">
+                  Linux
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question1" value="androiddotnet">
+                  Windows
+                </label class="form-check-label">
+              </div>
+            </fieldset>
 
+            <fieldset class="form-group"><!-- SECOND question -->
+              <legend>Which car would you prefer?</legend>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question2" value="csharpdotnet">
+                  2008 Toyota Corolla. Sensible and functional, efficient and safe.
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question2" value="cssdesign">
+                  1991 BMW 325iX. Classic design, the perfect balance between form and function.
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question2" value="cssreact">
+                  2018 WRX STI Limited. Cutting edge, fast, shiny, and exclusive.
+                </label class="form-check-label">
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question2" value="javaandroid">
+                  2015 Dodge Challenger Hellcat SRT. Powerful and flashy, baby boomers love it.
+                </label class="form-check-label">
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group"><!-- THIRD question -->
+              <legend>What is your favorite food?</legend>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question3" value="cssreact">
+                  Asada Burrito
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question3" value="cssdesign">
+                  Veggie bowl
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question3" value="csharpdotnet">
+                  Balogna sandwich
+                </label class="form-check-label">
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question3" value="javaandroid">
+                  Taco Bell
+                </label class="form-check-label">
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group"><!-- FOURTH question -->
+              <legend>What type of house would you like to live in?</legend>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question4" value="csharpdotnet">
+                  Country Modern in Mollala
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question4" value="cssdesign">
+                  Mid-Century Modern in Lents
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question4" value="cssreact">
+                  Portland Bungalow in Laurelhurst
+                </label class="form-check-label">
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question4" value="javaandroid">
+                  Town-House in Vancouver
+                </label class="form-check-label">
+              </div>
+            </fieldset>
+
+            <fieldset class="form-group"><!-- FIFTH question -->
+              <legend>What type of pet is best?</legend>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question5" value="cssreact">
+                  Cat. Relatively low maintenance, they mostly take care of themselves.
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question5" value="cssdesign">
+                  Designer dog. I need more followers on my Instagram. #dogsofig #unleashedlife
+                </label>
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question5" value="csharpdotnet">
+                  Goldfish. I don't have time for a real pet.
+                </label class="form-check-label">
+              </div>
+              <div class="radio">
+                <label class="form-check-label">
+                  <input class="form-check-input" type="radio" name="question5" value="javaandroid">
+                  Rescue dog. I enjoy the challenge and the upkeep.
+                </label class="form-check-label">
+              </div>
+            </fieldset>
+            <button type="submit" class="btn btn-outline-info">Let's see the results!</button>
+          </form>
         </div>
-    <!-- SURVEY REPLY -->
-        <div class="col-md-6">
+        <div class="col-md-6"><!-- SURVEY REPLY -->
           <div id="cssreact">
             <h3>You would be a great match for our CSS/React program!</h3>
           </div>
@@ -134,6 +265,7 @@
             <h3>You nerd! You should take the C#/.NET track!</h3>
           </div>
         </div>
+
       </div>
     </div>
   </body>
