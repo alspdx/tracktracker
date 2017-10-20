@@ -7,7 +7,6 @@ var city;
 $(document).ready(function() {
   $("form#userinfo").submit(function(event) {
     event.preventDefault();
-    var schoolCity = "Portland"
     var firstName = $("input#first-name").val();
     var lastName = $("input#last-name").val();
     var address = $("input#address").val();

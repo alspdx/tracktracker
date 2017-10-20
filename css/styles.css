@@ -1,12 +1,10 @@
-
- body {
+body {
   background: linear-gradient(to right, #1c1c1c, #2b2b2b, #2b2b2b, #2b2b2b, #2b2b2b, #2b2b2b, #1c1c1c);
   color: #d6d6d6;
 }
 
 a {
   color: #9968c1;
-
 }
 
 a:hover {
@@ -39,6 +37,6 @@ button:hover {
   margin: 20px;
 }
 
-#tracktracker, #cssreact, #cssdesign, #csharpdotnet, #javaandroid, #pickany, #portland-housing{
+#tracktracker, #cssreact, #cssdesign, #csharpdotnet, #javaandroid, #pickany, #portland-housing {
   display: none;
 }
