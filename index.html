@@ -112,10 +112,10 @@
                 <input type="text" class="form-control" id=zipcode placeholder="Zip">
               </div>
             </div>
-            <button type="submit" class="btn btn-primary">Take the survey!</button>
+            <button type="submit" class="btn btn-info">Take the survey!</button>
           </form>
           <form id="tracktracker"><!-- TRACK TRACKER FORM -->
-            <p class="lead">Thank you for taking our survey, <span id=user-name></span>! Select the answers below that best fit YOU!</p>
+            <p class="lead">Thank you for taking our survey, <span class=user-name></span>! Select the answers below that best fit YOU!</p>
             <fieldset class="form-group"><!-- FIRST question -->
               <legend>Which operating system do you prefer?</legend>
               <div class="radio">
@@ -137,7 +137,6 @@
                 </label class="form-check-label">
               </div>
             </fieldset>
-
             <fieldset class="form-group"><!-- SECOND question -->
               <legend>Which car would you prefer?</legend>
               <div class="radio">
@@ -165,7 +164,6 @@
                 </label class="form-check-label">
               </div>
             </fieldset>
-
             <fieldset class="form-group"><!-- THIRD question -->
               <legend>What is your favorite food?</legend>
               <div class="radio">
@@ -193,7 +191,6 @@
                 </label class="form-check-label">
               </div>
             </fieldset>
-
             <fieldset class="form-group"><!-- FOURTH question -->
               <legend>What type of house would you like to live in?</legend>
               <div class="radio">
@@ -221,7 +218,6 @@
                 </label class="form-check-label">
               </div>
             </fieldset>
-
             <fieldset class="form-group"><!-- FIFTH question -->
               <legend>What type of pet is best?</legend>
               <div class="radio">
@@ -249,13 +245,19 @@
                 </label class="form-check-label">
               </div>
             </fieldset>
-            <button type="submit" class="btn btn-outline-info">Let's see the results!</button>
+            <button type="submit" class="btn btn-info">Let's see the results!</button>
           </form>
+          <div id="portland-housing">
+            <h3>Hey <span class="user-name"></span>! Looks like you aren't from around here!</h3>
+            <p class="lead>">Find information about housing in Portland here!</p>
+          </div>
         </div>
         <div class="col-md-6"><!-- SURVEY REPLY -->
           <div id="cssreact">
-            <h3>You would be a great match for our CSS/React program!</h3>
-            <p>React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Designed by Facebook, React allows developers to create large web-applications that use data and can change over time without reloading the page. It aims primarily to provide speed, simplicity, and scalability.</p>
+
+              <h3 class="card-title">You would be a great match for our CSS/React program!</h3>
+              <p class="card-text">React is a declarative, efficient, and flexible JavaScript library for building user interfaces. Designed by Facebook, React allows developers to create large web-applications that use data and can change over time without reloading the page. It aims primarily to provide speed, simplicity, and scalability.</p>
+            
           </div>
           <div id="cssdesign">
             <h3>Looks like you're very design focused! Join our CSS/Design track now!</h3>
@@ -263,17 +265,17 @@
           </div>
           <div id="javaandroid">
             <h3>Sounds like you would be a good fit for the Java/Android track!</h3>
-
             <p>Android is a mobile operating system developed by Google, based on Linux and designed primarily for touchscreen mobile devices such as smartphones and tablets. Android is the most popular operating system and used for a variety of purposes, including running mobile apps, taking photos, sending messages, etc.</p>
           </div>
           <div id="csharpdotnet">
             <h3>You nerd! You should take the C#/.NET track!</h3>
             <p>.NET is a software framework developed by Microsoft and primarily used on Microsoft Windows. The .NET framework is used to create desktop, mobile, and web applications that run on various devices. It compiles and executes programs written in the C# and Visual Basic languages. C# and .NET are typically used by large enterprises, government agencies, and companies serving enterprises and government clients.</p>
           </div>
-        </div>
-          <div id="portland-housing">
-            <h1>Portland Housing Information</h1>
+          <div id="pickany">
+            <h3>The survey was inconclusive!</h3>
+            <p>Based on your answers we cannot recommend any particular track, we suggest you do some more research and come back!</p>
           </div>
+        </div>
       </div>
     </div>
   </body>
