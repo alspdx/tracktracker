@@ -1,6 +1,7 @@
 $(document).ready(function() {
   $("form#userinfo").submit(function(event) {
     event.preventDefault();
+    var schoolCity = "Portland"
     var firstName = $("input#first-name").val();
     var lastName = $("input#last-name").val();
     var address = $("input#address").val();
@@ -18,9 +19,10 @@ $(document).ready(function() {
     if (firstName && lastName && address && apartment && city && state && zipCode) {
       $("form#userinfo").hide();
       $("form#tracktracker").show();
-
-
-
+      $("span#user-name").text(firstName);
+      if (city.toUpperCase() !== "PORTLAND") {
+        $("div#portland-housing").show();
+      };
     } else {
       alert("Please")
     };
