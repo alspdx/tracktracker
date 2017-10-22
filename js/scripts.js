@@ -1,24 +1,21 @@
 $(document).ready(function() {
 
-  var cssDesign = 0;
-  var cssReact = 0;
-  var cSharpDotNet = 0;
-  var javaAndroid = 0;
   var city;
 
   $("form#userinfo").submit(function(event) {
     event.preventDefault();
     var firstName = $("input#first-name").val();
-    var lastName = $("input#last-name").val();
-    var address = $("input#address").val();
-    var apartment = $("input#apartment").val();
-    var state = $("select#state").val();
-    var zipCode = $("input#zipcode").val();
+        lastName = $("input#last-name").val();
+        address = $("input#address").val();
+        apartment = $("input#apartment").val();
+        state = $("select#state").val();
+        zipCode = $("input#zipcode").val();
+        
     city = $("input#city").val();
 
     if (firstName && lastName && address && city && state && zipCode) {
-      $("form#userinfo").hide();
-      $("form#tracktracker").show();
+      $("form#userinfo").slideUp();
+      $("form#tracktracker").slideDown();
       $("span.user-name").text(firstName);
     } else {
       alert("Oops! You didn't complete the form! Try harder next time.")
@@ -27,14 +24,20 @@ $(document).ready(function() {
 
   $("form#tracktracker").submit(function(event) {
     event.preventDefault();
+
+    var cssDesign = 0;
+        cssReact = 0;
+        cSharpDotNet = 0;
+        javaAndroid = 0;
+
     var input1 = $("input:radio[name=question1]:checked").val();
-    var input2 = $("input:radio[name=question2]:checked").val();
-    var input3 = $("input:radio[name=question3]:checked").val();
-    var input4 = $("input:radio[name=question4]:checked").val();
-    var input5 = $("input:radio[name=question5]:checked").val();
+        input2 = $("input:radio[name=question2]:checked").val();
+        input3 = $("input:radio[name=question3]:checked").val();
+        input4 = $("input:radio[name=question4]:checked").val();
+        input5 = $("input:radio[name=question5]:checked").val();
 
     if (input1 && input2 && input3 && input4 && input5) {
-      $("form#tracktracker").hide();
+      $("form#tracktracker").slideUp();
 
       if (input1 === "designreact") {
         cssDesign += 1;
@@ -85,23 +88,35 @@ $(document).ready(function() {
       };
 
       if (cssDesign >= 3) {
-        $("div#cssdesign").show();
+        $("div#cssdesign").fadeIn();
       } else if (cSharpDotNet >= 3) {
-        $("div#csharpdotnet").show();
+        $("div#csharpdotnet").fadeIn();
       } else if (javaAndroid >= 3) {
-        $("div#javaandroid").show();
+        $("div#javaandroid").fadeIn();
       } else if (cssReact >= 3) {
-        $("div#cssreact").show();
+        $("div#cssreact").fadeIn();
       } else {
-        $("div#pickany").show();
+        $("div#pickany").fadeIn();
       };
 
       if (city.toUpperCase() !== "PORTLAND") {
-        $("div#portland-housing").show();
+        $("div#portland-housing").slideDown();
       };
+
+      $("button#form-reset").fadeIn();
 
     } else {
       alert("Oops! You didn't answer all the questions! Do better next time.");
     };
+  });
+
+  $("button#form-reset").click(function() {
+    $("form#tracktracker").slideDown();
+    $("div#cssdesign").fadeOut();
+    $("div#csharpdotnet").fadeOut();
+    $("div#javaandroid").fadeOut();
+    $("div#cssreact").fadeOut();
+    $("div#pickany").fadeOut();
+    $(this).fadeOut();
   });
 });
