@@ -10,7 +10,7 @@ $(document).ready(function() {
         apartment = $("input#apartment").val();
         state = $("select#state").val();
         zipCode = $("input#zipcode").val();
-        
+
     city = $("input#city").val();
 
     if (firstName && lastName && address && city && state && zipCode) {
@@ -29,8 +29,7 @@ $(document).ready(function() {
         cssReact = 0;
         cSharpDotNet = 0;
         javaAndroid = 0;
-
-    var input1 = $("input:radio[name=question1]:checked").val();
+        input1 = $("input:radio[name=question1]:checked").val();
         input2 = $("input:radio[name=question2]:checked").val();
         input3 = $("input:radio[name=question3]:checked").val();
         input4 = $("input:radio[name=question4]:checked").val();
@@ -38,76 +37,48 @@ $(document).ready(function() {
 
     if (input1 && input2 && input3 && input4 && input5) {
       $("form#tracktracker").slideUp();
-
-      if (input1 === "designreact") {
-        cssDesign += 1;
-        cssReact += 1;
-      } else if (input1 === "androiddotnet") {
-        cSharpDotNet += 1;
-        javaAndroid += 1;
-      };
-
-      if (input2 === "cssdesign") {
-        cssDesign += 1;
-      } else if (input2 === "csharpdotnet") {
-        cSharpDotNet += 1;
-      } else if (input2 === "javaandroid") {
-        javaAndroid += 1;
-      } else if (input2 === "cssreact") {
-        cssReact += 1;
-      };
-
-      if (input3 === "cssdesign") {
-        cssDesign += 1;
-      } else if (input3 === "csharpdotnet") {
-        cSharpDotNet += 1;
-      } else if (input3 === "javaandroid") {
-        javaAndroid += 1;
-      } else if (input3 === "cssreact") {
-        cssReact += 1;
-      };
-
-      if (input4 === "cssdesign") {
-        cssDesign += 1;
-      } else if (input4 === "csharpdotnet") {
-        cSharpDotNet += 1;
-      } else if (input4 === "javaandroid") {
-        javaAndroid += 1;
-      } else if (input4 === "cssreact") {
-        cssReact += 1;
-      };
-
-      if (input5 === "cssdesign") {
-        cssDesign += 1;
-      } else if (input5 === "csharpdotnet") {
-        cSharpDotNet += 1;
-      } else if (input5 === "javaandroid") {
-        javaAndroid += 1;
-      } else if (input5 === "cssreact") {
-        cssReact += 1;
-      };
-
-      if (cssDesign >= 3) {
-        $("div#cssdesign").fadeIn();
-      } else if (cSharpDotNet >= 3) {
-        $("div#csharpdotnet").fadeIn();
-      } else if (javaAndroid >= 3) {
-        $("div#javaandroid").fadeIn();
-      } else if (cssReact >= 3) {
-        $("div#cssreact").fadeIn();
-      } else {
-        $("div#pickany").fadeIn();
-      };
-
-      if (city.toUpperCase() !== "PORTLAND") {
-        $("div#portland-housing").slideDown();
-      };
-
-      $("button#form-reset").fadeIn();
-
     } else {
       alert("Oops! You didn't answer all the questions! Do better next time.");
     };
+
+    var userChoices = [input1, input2, input3, input4, input5];
+
+    userChoices.forEach(function(userChoice) {
+      if (userChoice === "designreact") {
+        cssDesign += 1;
+        cssReact += 1;
+      } else if (userChoice === "androiddotnet") {
+        cSharpDotNet += 1;
+        javaAndroid +=1;
+      } else if (userChoice === "cssdesign") {
+        cssDesign += 1;
+      } else if (userChoice === "csharpdotnet") {
+        cSharpDotNet += 1;
+      } else if (userChoice === "javaandroid") {
+        javaAndroid += 1;
+      } else if (userChoice === "cssreact") {
+        cssReact += 1;
+      };
+    });
+
+    if (cssDesign >= 3) {
+      $("div#cssdesign").fadeIn();
+    } else if (cSharpDotNet >= 3) {
+      $("div#csharpdotnet").fadeIn();
+    } else if (javaAndroid >= 3) {
+      $("div#javaandroid").fadeIn();
+    } else if (cssReact >= 3) {
+      $("div#cssreact").fadeIn();
+    } else {
+      $("div#pickany").fadeIn();
+    };
+
+    if (city.toUpperCase() !== "PORTLAND") {
+      $("div#portland-housing").slideDown();
+    };
+
+    $("button#form-reset").fadeIn();
+
   });
 
   $("button#form-reset").click(function() {
